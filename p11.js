@@ -17,11 +17,9 @@ const students = [
 
 const sortByResultAverage = () => {
   const makeAverage = (numbers) => {
-    const totalMark = numbers.reduce((sum, num) => {
-      return sum + num;
-    }, 0);
+    const totalMark = numbers.reduce((sum, num) => sum + num, 0);
 
-    const average = totalMark / (numbers.length + 1);
+    const average = totalMark / numbers.length;
     return average;
   };
 
